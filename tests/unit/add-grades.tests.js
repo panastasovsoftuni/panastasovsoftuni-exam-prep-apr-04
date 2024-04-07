@@ -22,7 +22,7 @@ suite('Add Grades page', function () {
     assert.ok(buttonAddFound, "Button [Add] is missing");
   });
 
-  test.only('Add valid grade', async function () {
+  test('Add valid grade', async function () {
     let res = await fetch(
       "http://localhost:8888/Add-Grade", {
       method: 'POST',
