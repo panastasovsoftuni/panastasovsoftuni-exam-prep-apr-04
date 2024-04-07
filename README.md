@@ -1,0 +1,1 @@
+[![Grade-App CI-CD pipeline](https://github.com/panastasovsoftuni/panastasovsoftuni-exam-prep-apr-04/actions/workflows/pipeline.yml/badge.svg)](https://github.com/panastasovsoftuni/panastasovsoftuni-exam-prep-apr-04/actions/workflows/pipeline.yml)
