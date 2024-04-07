@@ -1,0 +1,25 @@
+name: Grade-App CI-CD pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-test-unit:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the repo
+      uses: actions/checkout@v3
+    - name: Install Node.js 20.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20.x
+        cache: 'npm'
+    - name: Install dependencies
+      run: npm install
+    - name: Make unit tests 
+    - run: test:unit
