@@ -22,3 +22,22 @@ jobs:
         run: npm install
       - name: Make unit tests
         run: npm run test:unit
+
+  make-ui-tests:
+    runs-on: ubuntu-latest
+    needs: build-test-unit
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v3
+      - name: Install Node.js 20.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+          cache: "npm"
+      - name: Install dependencies
+        run: npm install
+      - name: Install playwrite browsers
+        run: npx playwright install
+      - name: Make unit tests
+        run: npm run test:unit
